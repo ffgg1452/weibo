@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GB2312"?>
+<ICTCLAS>
+	<Person>On</Person>//On:载入人名识别模块; Off:去除人名识别模块
+	<Location>On</Location>//On:载入地名识别模块; Off:去除地名识别模块
+	<Orgnization>On</Orgnization>//On:载入机构名识别模块; Off:去除机构名识别模块
+	<Tagger>On</Tagger>//On: 载入词性标注模块; Off: 去除词性标注模块
+	<DataPath>Data</DataPath>//Data文件夹路径
+	<TagSet>ICTPOS.map</TagSet>//词性标注集映射文件
+	<Evaluation>PKU</Evaluation>//None,UPenn;评测类型，专为国际评测定制，普通用户不能修改
+	<GranularityContorl>On</GranularityContorl>//粒度控制 如：中国 人 ，中国人
+	<UserDict>On</UserDict>//On：User Dictionary applied; Off: not applied；
+	<FieldDict>On</FieldDict>//On：Field Dictionary applied; Off: not applied；
+	<UserDictPrior>On</UserDictPrior>//用户词典优先
+	<Log>On</Log>//On, Off；例如：Off: 关闭日志功能；On: 打开日志功能
+	<Key>f8ei9zh7ang!#5$</Key>//Encrypt key
+	<version>5.0.20110216</version>//系统版本号
+	<Modify>2011-08-16</Modify>//系统最近修订时间
+	<Lexicon>2010-12-09</Lexicon>//词典最近修订时间
+</ICTCLAS>
+
