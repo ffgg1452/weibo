@@ -256,5 +256,11 @@ if __name__ == '__main__':
     db = MyDB('2013_05_06_lichengpengjiuzai')
     cookie=Cookie()
     user = Login(cookie)
-    ss = Search('朝鲜 渔船',cookie,db,user.uid)
+    ss = Search('拜仁 夺冠',cookie,db,user.uid)
 #     bb=Repost('http://weibo.com/1189591617/ztZeSm2fw',cookie,db,user.uid)
+
+# 菲律宾 渔民
+# 朝鲜 渔船
+# 拜仁 夺冠
+# 雅安 地震
+# 李承鹏 帐篷
