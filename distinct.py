@@ -58,8 +58,8 @@ def run(list1):
                 
 if __name__ == '__main__':
     dirs = os.getcwd()
-    f1 = open(dirs+r'\\weibodata\\untagged_post.txt','r')
-    f2 = open(dirs+r'\\weibodata\\untagged_post_distinct.txt','w')
+    f1 = open(dirs+r'\\weibodata\\0524.txt','r')
+    f2 = open(dirs+r'\\weibodata\\0524_distinct.txt','w')
     list1 = f1.readlines()
     run(list1)
     f2.writelines(list1)
