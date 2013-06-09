@@ -18,7 +18,9 @@ pubkey_2 = '10001'
 
 
 def rsa_encrypt(servertime,nonce,passwd):
-    '''rsa加密'''
+    '''
+    RSA encrypt
+    '''
     msg = servertime+'\t'+nonce+'\n'+passwd
     pubkey = rsa.PublicKey(int(pubkey_1,16),int(pubkey_2,16))
     return binascii.b2a_hex(rsa.encrypt(msg,pubkey))
@@ -58,7 +60,7 @@ class Cookie(object):
     
 
 class Search(object):
-    '''处理搜索请求的类'''
+    '''capture data from weibo.com'''
     def __init__(self,keyword,cookie,db,uid,max_page=50):
         self.cookie = cookie
         self.db = db
@@ -111,7 +113,7 @@ class Search(object):
             self.onePost(i)
         
     def onePost(self,content_raw):
-        ''' 对一条微博的内容进行处理     '''
+        '''parse one post '''
         detail = self.regex_detail.search(content_raw)
         (name,text,mid,url,time) = (eval('u"%s"'%detail.group(1)),self._post(detail.group(2)),detail.group(3),detail.group(4).replace(r'\/','/'),self._time(detail.group(5)))
         print name+':'+text
@@ -119,31 +121,36 @@ class Search(object):
             self.db.insert('post', mid=mid, text=text, time=time, url=url, name=name)
 
     def _post(self,raw_data):
-        ''' 对微博内容进行处理
-            return:微博内容
+        ''' 
+        return the content of the post
         '''
         text=eval('u"%s\"'%self.htmlparser.unescape(re.sub(r'<img src=.*? title=\\\\"|\\\\" type=\\\\"face\\\\" \\\\/>|<.*?>',r'',raw_data).replace(r'\/',r'/')).replace(r'"',r'\"')) #.encode("utf-8")
         return text
     
     def _time(self,raw_time):
-        '''对微博的发布时间进行处理'''
+        '''
+        return post time
+        '''
         t = time.gmtime(int(raw_time)/1000+28800)
         ptime = datetime.datetime(t.tm_year,t.tm_mon,t.tm_mday,t.tm_hour,t.tm_min,t.tm_sec)
         return ptime
 
         
 class Login(object):
-    '''处理登陆过程的类'''
+    '''
+    login class
+    '''
     def __init__(self, cookie):
         self.cookie = cookie
         self.user = user_name
+        '''if fails,use static cookies'''
         if not self.tryLogin(user_name,pass_word):
             cookie_o = '    SINAGLOBAL=6313897871157.115.1367764261439; ULV=1368415797727:13:13:2:1895082794250.7397.1368415797699:1368333010880; UOR=,,login.sina.com.cn; myuid=2642681933; un=qiaoyq@mail.ustc.edu.cn; _s_tentry=-; Apache=1895082794250.7397.1368415797699; USRHAWB=usrmdins21133; WBStore=4639942f83659774|undefined; SUS=SID-2671992203-1368428144-JA-fghy7-6ce72a963ca719d94b23fb4d677b6469; SUE=es%3D5016b754c87a1b2eafbefcb5cdc29fce%26ev%3Dv1%26es2%3Df8ca0df8f3ff0f09c55a7d6a84eff4d8%26rs0%3DiBuvgVts2xHZ0%252FwUXQMb6u5PkCNszq2R6z9bQCJxrKq0TdRtsWyBpO5nqVfzBVVL%252BIKUmdKIRgmEPpZ1ynhCysJCXIjnFa2ZvL%252FiXLAJub08lW3yELmWALhaw%252FBxhVZK3Fe5mtEDNM4ku7d%252B4ddk0vSnVqOj7xPkxxmr%252B3YVeWU%253D%26rv%3D0; SUP=cv%3D1%26bt%3D1368428144%26et%3D1368514544%26d%3Dc909%26i%3D608b%26us%3D1%26vf%3D0%26vt%3D0%26ac%3D0%26st%3D0%26uid%3D2671992203%26user%3Dqiaoyq%2540mail.ustc.edu.cn%26ag%3D4%26name%3Dqiaoyq%2540mail.ustc.edu.cn%26nick%3Dtest_ustc%26fmp%3D%26lcp%3D; ALF=1371020143; SSOLoginState=1368428144; wvr=5; ULOGIN_IMG=13684284127617'
             cookie.opener.addheaders=[('Cookie',cookie_o)]
             self.uid = '2671992203'
 
     def tryLogin(self, username, password):
-        '''登陆过程'''
+        '''login'''
         su=base64.b64encode(username)
         bodies = dict(_=int(time.time()),checkpin='1',callback='sinaSSOController.preloginCallBack',client='ssologin.js(v1.4.5)',entry='weibo',rsakt='mod',su=su)
         preloadurl = 'http://login.sina.com.cn/sso/prelogin.php'
@@ -188,7 +195,7 @@ class Login(object):
         
 
 class MyDB(object):
-    '''sqlite3数据库处理'''
+    '''sqlite3 database interface'''
     def __init__(self, filename):
         dirs = os.getcwd()
         self.path = dirs+'\\database\\'+filename+'.sqlite3'#r"\weibo2"

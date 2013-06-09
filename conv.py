@@ -2,6 +2,9 @@
 import re,os,codecs
 
 def run():
+    '''
+    get data from database to text files
+    '''
     dirs = os.getcwd()
     filename = 'lichengpengzhangpeng_ori_post.txt'
     fp1 = file(dirs+'\\weibodata\\'+filename,'r')
