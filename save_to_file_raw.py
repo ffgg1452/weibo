@@ -9,6 +9,9 @@ import codecs
 import os
 
 def run():
+    '''
+    move data from database to text files
+    '''
     dir = os.getcwd()
     filename = dir+'\\weibodata\\'+'untagged_%s.txt'
     
