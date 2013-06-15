@@ -1,0 +1,43 @@
+1.环境配置：
+	(1)下载Python2.7 地址：http://www.python.org/getit/  （*注意一定是2.7）
+	(2)下载用到的包（*包的版本必须是可用于python2.7的）：
+		a. numpy 地址：https://pypi.python.org/pypi/numpy  
+		b. scipy 地址：https://pypi.python.org/pypi/scipy
+		c. rsa 地址：https://pypi.python.org/pypi/rsa
+		d. scikit-learn 地址：http://sourceforge.net/projects/scikit-learn/files/
+	(3)其他工具：
+		a. libsvm 地址：http://www.csie.ntu.edu.tw/~cjlin/libsvm/index.html
+		b. gunplot 地址：http://sourceforge.net/projects/gnuplot/
+
+2.文件说明：
+	(1)程序文件：
+		weibo_pkg.py 微博爬虫部分
+		sentiment_pkg.py 情感分析部分
+		save_to_file_raw.py 将微博内容从数据库转存为txt文本，便于情感分析
+		distinct.py 一个排除重复内容微博的程序，速度比较慢，不推荐用
+	(2)数据文件：
+		database/ 数据库文件夹
+			2013_05_06_lichengpengjiuzai.sqlite3 本次实验的数据库文件
+		weibodata/ 已标注的微博数据文件夹
+			train.txt 微博数据训练集
+			test.txt 微博数据测试集
+		otherdata/ 已标注的对照数据文件夹
+			train.txt 微博数据训练集
+			test.txt 微博数据测试集
+		0603result.txt 本次实验结果
+	(3)其他文件：
+		ICTCLAS50.dll
+		ICTCLAS50.h
+		ICTCLAS50.lib
+		ICTCLAS.log
+		user.lic
+		Configure.xml
+		Data/               以上是分词工具ICTCLAS的文件
+		
+		
+3.如何使用：
+	(1)用weibo_pkg.py爬取微博数据，存入数据库，注意在使用前修改关键词、输入输出文件名等参数
+	(2)用save_to_file_raw.py将数据库中数据转存到txt文件，要修改输入输出文件名
+	(3)手动标注微博情感，正向为p，负向为n，与微博内容用\t符隔开。并分开为训练集和测试集。
+	(4)在sentiment_pkg.py中调用分类器对微博进行分类。注意参数修改。
+	(5)在用RBF SVM做分类时，可以使用libsvm中的tool工具优化参数，详情参考
