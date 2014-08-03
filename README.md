@@ -16,8 +16,7 @@ b. gunplot 地址：http://sourceforge.net/projects/gnuplot/
 -----------------------------------------
 ### (1)程序文件：
 
-> weibo_pkg.py 微博爬虫部分
-> 
+> weibo_pkg.py 微博爬虫部分<br />
 > sentiment_pkg.py 情感分析部分
 > 
 > save_to_file_raw.py 将微博内容从数据库转存为txt文本，便于情感分析
