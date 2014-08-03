@@ -26,22 +26,36 @@ b. gunplot 地址：http://sourceforge.net/projects/gnuplot/
 
 ### (2)数据文件：
 > database/ 数据库文件夹
+> 
 > > 2013_05_06_lichengpengjiuzai.sqlite3 本次实验的数据库文件
+> 
 > weibodata/ 已标注的微博数据文件夹
+> 
 > > train.txt 微博数据训练集
+> > 
 > > test.txt 微博数据测试集
+> 
 > otherdata/ 已标注的对照数据文件夹
+> 
 > > train.txt 微博数据训练集
+> > 
 > > test.txt 微博数据测试集
+> > 
 > > 0603result.txt 本次实验结果
 
 ### (3)其他文件：
 > ICTCLAS50.dll
+> 
 > ICTCLAS50.h
+> 
 > ICTCLAS50.lib
+> 
 > ICTCLAS.log
+> 
 > user.lic
+> 
 > Configure.xml
+> 
 > Data/ 以上是分词工具ICTCLAS的文件
 
 
