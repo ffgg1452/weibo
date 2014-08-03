@@ -15,15 +15,20 @@ b. gunplot 地址：http://sourceforge.net/projects/gnuplot/
 2.文件说明：
 -----------------------------------------
 ### (1)程序文件：
-weibo_pkg.py 微博爬虫部分<br />
-sentiment_pkg.py 情感分析部分<br />
-save_to_file_raw.py 将微博内容从数据库转存为txt文本，便于情感分析<br />
-distinct.py 一个排除重复内容微博的程序，速度比较慢，不推荐用<br />
+
+> weibo_pkg.py 微博爬虫部分<br />
+> sentiment_pkg.py 情感分析部分<br />
+> save_to_file_raw.py 将微博内容从数据库转存为txt文本，便于情感分析<br />
+> distinct.py 一个排除重复内容微博的程序，速度比较慢，不推荐用
+
 ### (2)数据文件：
-database/ 数据库文件夹
-2013_05_06_lichengpengjiuzai.sqlite3 本次实验的数据库文件
-weibodata/ 已标注的微博数据文件夹
-train.txt 微博数据训练集
+> database/ 数据库文件夹
+> 
+> > 2013_05_06_lichengpengjiuzai.sqlite3 本次实验的数据库文件
+> 
+> weibodata/ 已标注的微博数据文件夹
+> 
+> > train.txt 微博数据训练集
 test.txt 微博数据测试集
 otherdata/ 已标注的对照数据文件夹
 train.txt 微博数据训练集
