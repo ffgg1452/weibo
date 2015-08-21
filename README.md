@@ -46,8 +46,8 @@ b. gunplot 地址：http://sourceforge.net/projects/gnuplot/
 
 3.如何使用：
 ------------------------------------------
-(1) 用weibo_pkg.py爬取微博数据，存入数据库，注意在使用前修改关键词、输入输出文件名等参数<br />
-(2) 用save_to_file_raw.py将数据库中数据转存到txt文件，要修改输入输出文件名<br />
+(1) 用weibo_pkg.py爬取微博数据，存入数据库，注意在使用前修改关键词、输入输出文件名等参数。<br />
+(2) 用save_to_file_raw.py将数据库中数据转存到txt文件，要修改输入输出文件名。<br />
 (3) 手动标注微博情感，正向为p，负向为n，与微博内容用\t符隔开。并分开为训练集和测试集。<br />
 (4) 在sentiment_pkg.py中调用分类器对微博进行分类。注意参数修改。<br />
-(5) 在用RBF SVM做分类时，可以使用libsvm中的tool工具优化参数，详情参考<br />
+(5) 在用RBF SVM做分类时，可以使用libsvm中的tool工具优化参数，详情参考libsvm页面。<br />
