@@ -51,3 +51,8 @@ b. gunplot 地址：http://sourceforge.net/projects/gnuplot/
 (3) 手动标注微博情感，正向为p，负向为n，与微博内容用\t符隔开。并分开为训练集和测试集。<br />
 (4) 在sentiment_pkg.py中调用分类器对微博进行分类。注意参数修改。<br />
 (5) 在用RBF SVM做分类时，可以使用libsvm中的tool工具优化参数，详情参考libsvm页面。<br />
+
+
+4.界面展示：
+------------------------------------------
+(1) ![image](https://github.com/ffgg1452/weibo/edit/master/example_img/1.png)
