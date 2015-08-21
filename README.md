@@ -55,11 +55,11 @@ b. gunplot 地址：http://sourceforge.net/projects/gnuplot/
 
 4.界面展示：
 ------------------------------------------
-(1) 最大影响微博<br />![最大影响微博](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/1.png)
-(2) 按地区、情感趋向<br />![按地区、情感趋向](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/2.png)
-(3) 按地区、性别<br />![按地区、性别](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/3.png)
-(4) 按时间、影响力、情感趋向<br />![按时间、影响力、情感趋向](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/4.png)
-(5) 按时间、影响力、性别<br />![按时间、影响力、性别](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/5.png)
-(6) 关键词热度图<br />![关键词热度图](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/6.png)
-(7) 微博基本信息统计<br />![微博基本信息统计](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/7.png)
-(8) 微博转发路径图<br />![微博转发路径图](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/9.png)
+(1) 最大影响微博<br />![最大影响微博](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/1.png)<br />
+(2) 按地区、情感趋向<br />![按地区、情感趋向](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/2.png)<br />
+(3) 按地区、性别<br />![按地区、性别](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/3.png)<br />
+(4) 按时间、影响力、情感趋向<br />![按时间、影响力、情感趋向](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/4.png)<br />
+(5) 按时间、影响力、性别<br />![按时间、影响力、性别](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/5.png)<br />
+(6) 关键词热度图<br />![关键词热度图](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/6.png)<br />
+(7) 微博基本信息统计<br />![微博基本信息统计](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/7.png)<br />
+(8) 微博转发路径图<br />![微博转发路径图](https://raw.githubusercontent.com/ffgg1452/weibo/master/example_img/9.png)<br />
